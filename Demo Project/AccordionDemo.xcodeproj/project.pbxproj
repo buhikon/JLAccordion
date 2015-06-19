@@ -150,7 +150,8 @@
 				64E83C981B0B31D8000DFD07 /* JLAccordionDataController.h */,
 				64E83C991B0B31D8000DFD07 /* JLAccordionDataController.m */,
 			);
-			path = JLAccordion;
+			name = JLAccordion;
+			path = ../../JLAccordion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
