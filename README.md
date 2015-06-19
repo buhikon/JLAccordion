@@ -48,7 +48,6 @@ self.accordionDataController.delegate = self;
 > JLAccordionDelegate
 
 
-#### example
 ```
 #pragma mark - <UITableViewDataSource>
 
