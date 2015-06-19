@@ -168,11 +168,33 @@
     NSMutableArray *openedIdentifiers = [NSMutableArray arrayWithArray:self.openedIdentifierArray];
     NSMutableArray *insertIndexPaths = [NSMutableArray array];
     
+    // -----------------------------------------------------------
+    // #step 1: call delegate for animating cells
+    //   - the indexpath for this delegate should be the index before changing array.
+    if(self.accordionDelegate) {
+        for(NSInteger parentIndex=0; parentIndex<array.count; parentIndex++) {
+            
+            JLAccordionData *openedData = array[parentIndex];
+            
+            // don't use [self isOpenedForIdentifier] here
+            BOOL isOpened = NO;
+            for (JLAccordionData *data in array) {
+                if( [data.parentIdentifier isEqualToString:openedData.identifier] ) {
+                    isOpened = YES;
+                    break;
+                }
+            }
+            if([openedData isParentData] && !isOpened) {
+                [self.accordionDelegate accordionTableView:tableView shouldOpenCellForIndexPath:[NSIndexPath indexPathForRow:parentIndex inSection:section]];
+            }
+        }
+    }
     
+    // -----------------------------------------------------------
+    // #step 2: change data and animate
     for(NSInteger parentIndex=0; parentIndex<array.count; parentIndex++) {
         
         JLAccordionData *openedData = array[parentIndex];
-        
         
         // don't use [self isOpenedForIdentifier] here
         BOOL isOpened = NO;
@@ -185,11 +207,6 @@
         
         if([openedData isParentData] && !isOpened) {
 
-            // animate (delegate)
-            if(self.accordionDelegate) {
-                [self.accordionDelegate accordionTableView:tableView shouldOpenCellForIndexPath:[NSIndexPath indexPathForRow:parentIndex inSection:section]];
-            }
-            
             // add to openedIdentifierArray
             [openedIdentifiers addObject:openedData.identifier];
             
@@ -207,7 +224,6 @@
             }
         }
     }
-    
     if(insertIndexPaths.count > 0) {
         // set new data
         self.openedIdentifierArray = openedIdentifiers;
@@ -304,6 +320,7 @@
     // animate cells (delegate) <- should be performed before setting new data to self.tableViewDataArray.
     NSMutableArray *indexPathsToBeClosed = nil;
     if(self.accordionDelegate) {
+
         indexPathsToBeClosed = [NSMutableArray array];
         // search parent index
         for (NSString *identifier in identifiers) {
