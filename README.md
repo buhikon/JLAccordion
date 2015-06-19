@@ -4,11 +4,11 @@ An accordion controller based on UITableView.
 
 
 ## Usage
+Please check out the demo project in the repository.
 
-Please check out included demo project.
 
 
-1. Structure
+- Structure
 
 [![](https://raw.github.com/buhikon/JLAccordion/master/img01.png)](https://raw.github.com/buhikon/JLAccordion/master/img01.png)
 
@@ -17,32 +17,38 @@ You need to create parent data and child data for each cells.
 
 
 
-2. Set data
+- Set data
 
 - Create Parent Data
+```
 [JLAccordionData parentDataWithIdentifier:@"parent_001"
                                  userData:@{@"title":@"Hello"}];
+```
 
 - Create Child Data                                 
+```
 [JLAccordionData childDataWithIdentifier:@"child_001"
                         parentIdentifier:@"parent_001"
                                 userData:@{@"title":@"World"}];
+```
                                 
 - Set parent data and child data
+```
 self.accordionDataController = [JLAccordionDataController alloc] init];
 self.accordionDataController.delegate = self;
 [self.accordionData setParentDataArray:(array of parent data)
                         childDataArray:(array of child data)];
+```
                         
 
-3. Implement below 3 protocols.
+- Implement below 3 protocols.
 
 > UITableViewDataSource
 > UITableViewDelegate
 > JLAccordionDelegate
 
 
-#example
+- example
 ```
 #pragma mark - <UITableViewDataSource>
 
@@ -104,6 +110,7 @@ self.accordionDataController.delegate = self;
 
 ## Sample data and Demo
 
+```
 sample of parent data : (
     "identifier : 100, parentIdentifier : (null), userData : {title : Hello}",
     "identifier : 200, parentIdentifier : (null), userData : {title : World}",
@@ -124,6 +131,7 @@ sample of child data : (
     "identifier : 502, parentIdentifier : 500, userData : {title : operation cwal}",
     "identifier : 503, parentIdentifier : 500, userData : {title : power overwhelming}"
 )
+```
 
 [![](https://raw.github.com/buhikon/JLAccordion/master/demo.gif)](https://raw.github.com/buhikon/JLAccordion/master/demo.gif)
 
