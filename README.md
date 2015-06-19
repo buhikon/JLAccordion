@@ -8,7 +8,7 @@ Please check out the demo project in the repository.
 
 
 
-- Structure
+#### Structure
 
 [![](https://raw.github.com/buhikon/JLAccordion/master/img01.png)](https://raw.github.com/buhikon/JLAccordion/master/img01.png)
 
@@ -17,7 +17,7 @@ You need to create parent data and child data for each cells.
 
 
 
-- Set data
+#### Set data
 
 - Create Parent Data
 ```
@@ -41,14 +41,14 @@ self.accordionDataController.delegate = self;
 ```
                         
 
-- Implement below 3 protocols.
+#### Implement below 3 protocols.
 
 > UITableViewDataSource
 > UITableViewDelegate
 > JLAccordionDelegate
 
 
-- example
+#### example
 ```
 #pragma mark - <UITableViewDataSource>
 
