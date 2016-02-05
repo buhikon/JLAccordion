@@ -1,0 +1,6 @@
+framework module JLAccordion {
+  umbrella header "JLAccordion-umbrella.h"
+
+  export *
+  module * { export * }
+}

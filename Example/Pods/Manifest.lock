@@ -1,0 +1,14 @@
+PODS:
+  - JLAccordion (0.1.0)
+
+DEPENDENCIES:
+  - JLAccordion (from `../`)
+
+EXTERNAL SOURCES:
+  JLAccordion:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JLAccordion: a6fb094ab221eca387a8cc49708c39a474bd1312
+
+COCOAPODS: 0.39.0
