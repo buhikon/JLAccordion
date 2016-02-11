@@ -36,8 +36,8 @@ You need to create parent data and child data for each cells.
 ```
 self.accordionDataController = [JLAccordionDataController alloc] init];
 self.accordionDataController.accordionDelegate = self;
-[self.accordionData setParentDataArray:(array of parent data)
-                        childDataArray:(array of child data)];
+[self.accordionDataController setParentDataArray:(array of parent data)
+                                  childDataArray:(array of child data)];
 ```
                         
 
