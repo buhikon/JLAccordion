@@ -11,6 +11,7 @@
 		3356DE8C41F96913EAB79F9801C88143 /* JLAccordion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EDFEDABD4B520BB5BDA5705264090048 /* JLAccordion.bundle */; };
 		4A76AFAA2B0BC30C5E856F62415446FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		5BBB0D7B29BF45EA69140DCC2D337A55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		6445C5B01C6C10E600DA3852 /* JLAccordion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6445C5AF1C6C10AF00DA3852 /* JLAccordion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		646072711C6476C200702467 /* JLAccordionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6460726D1C6476C200702467 /* JLAccordionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		646072721C6476C200702467 /* JLAccordionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6460726E1C6476C200702467 /* JLAccordionData.m */; };
 		646072741C6476C200702467 /* JLAccordionDataController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6460726F1C6476C200702467 /* JLAccordionDataController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +67,7 @@
 		41F8E4398B22742999A22AFB7CB1D609 /* Pods-JLAccordion_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JLAccordion_Example.modulemap"; sourceTree = "<group>"; };
 		5397C6783EBBD93BF2C4E913DD873600 /* Pods-JLAccordion_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JLAccordion_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58445ECAB5E94FDE80F7C4447D91EC13 /* Pods-JLAccordion_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JLAccordion_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6445C5AF1C6C10AF00DA3852 /* JLAccordion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLAccordion.h; sourceTree = "<group>"; };
 		6460726D1C6476C200702467 /* JLAccordionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAccordionData.h; sourceTree = "<group>"; };
 		6460726E1C6476C200702467 /* JLAccordionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAccordionData.m; sourceTree = "<group>"; };
 		6460726F1C6476C200702467 /* JLAccordionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAccordionDataController.h; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				6460726E1C6476C200702467 /* JLAccordionData.m */,
 				6460726F1C6476C200702467 /* JLAccordionDataController.h */,
 				646072701C6476C200702467 /* JLAccordionDataController.m */,
+				6445C5AF1C6C10AF00DA3852 /* JLAccordion.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				29FF6BD7F0F669EA16E9AC5C7B647BD9 /* JLAccordion-umbrella.h in Headers */,
 				646072741C6476C200702467 /* JLAccordionDataController.h in Headers */,
 				646072711C6476C200702467 /* JLAccordionData.h in Headers */,
+				6445C5B01C6C10E600DA3852 /* JLAccordion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

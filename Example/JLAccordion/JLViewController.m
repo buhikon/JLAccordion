@@ -9,7 +9,7 @@
 #import "JLViewController.h"
 #import "ParentTableViewCell.h"
 #import "ChildTableViewCell.h"
-#import "JLAccordionDataController.h"
+#import "JLAccordion.h"
 
 @interface JLViewController () <UITableViewDataSource, UITableViewDelegate, JLAccordionDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
