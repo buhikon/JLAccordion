@@ -1,7 +1,7 @@
 //
 //  JLAccordionDataController.m
 //
-//  Version 0.2.0
+//  Version 0.2.1s
 //
 //  Created by Joey L. on 5/18/2015.
 //  https://github.com/buhikon/JLAccordion
@@ -116,7 +116,7 @@
         NSLog(@"warning: tried to open the cell which is already opened.");
         return;
     }
-//    joey
+    if(![self hasChildForIdentifier:identifier]) return;
     
     NSMutableArray *array = [NSMutableArray arrayWithArray:self.tableViewDataArray];
     
