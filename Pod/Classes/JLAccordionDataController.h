@@ -1,7 +1,7 @@
 //
 //  JLAccordionDataController.h
 //
-//  Version 0.1.1
+//  Version 0.2.0
 //
 //  Created by Joey L. on 5/18/2015.
 //  https://github.com/buhikon/JLAccordion
@@ -21,6 +21,8 @@
 @interface JLAccordionDataController : NSObject
 
 @property (weak, nonatomic) id<JLAccordionDelegate> accordionDelegate;
+@property (assign, nonatomic) BOOL closeOtherCellsWhenOpen; // default NO.
+
 
 - (BOOL)setParentDataArray:(NSArray *)parentDataArray
             childDataArray:(NSArray *)childDataArray;

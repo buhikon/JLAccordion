@@ -1,7 +1,7 @@
 //
 //  JLAccordionData.m
 //
-//  Version 0.1.1
+//  Version 0.2.0
 //
 //  Created by Joey L. on 5/18/2015.
 //  https://github.com/buhikon/JLAccordion

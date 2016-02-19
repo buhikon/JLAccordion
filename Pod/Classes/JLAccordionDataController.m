@@ -1,7 +1,7 @@
 //
 //  JLAccordionDataController.m
 //
-//  Version 0.1.1
+//  Version 0.2.0
 //
 //  Created by Joey L. on 5/18/2015.
 //  https://github.com/buhikon/JLAccordion
@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSMutableArray *parentDataArray;      // array of JLAccordionData
 @property (strong, nonatomic) NSMutableArray *childDataArray;       // array of JLAccordionData
 @property (strong, nonatomic) NSMutableArray *openedIdentifierArray; // array of NSString
+@property (strong, nonatomic) NSIndexPath *openedIndexPath;
 
 @end
 
@@ -115,6 +116,7 @@
         NSLog(@"warning: tried to open the cell which is already opened.");
         return;
     }
+//    joey
     
     NSMutableArray *array = [NSMutableArray arrayWithArray:self.tableViewDataArray];
     
@@ -371,18 +373,9 @@
                      tableView:(UITableView *)tableView
 {
     JLAccordionData *data = [self dataForIndex:indexPath.row];
-    if([data isParentData]) {
-        if([self isOpenedForIdentifier:data.identifier]) {
-            [self closeCellForIdentifier:data.identifier
-                               tableView:tableView
-                                 section:indexPath.section];
-        }
-        else {
-            [self openCellForIdentifier:data.identifier
-                               tableView:tableView
-                                 section:indexPath.section];
-        }
-    }
+    [self toggleCellForIdentifier:data.identifier
+                        tableView:tableView
+                          section:indexPath.section];
 }
 - (void)toggleCellForIdentifier:(NSString *)identifier
                       tableView:(UITableView *)tableView
@@ -394,6 +387,9 @@
                              section:section];
     }
     else {
+        if(self.closeOtherCellsWhenOpen) {
+            [self closeAllCellsWithTableView:tableView section:section];
+        }
         [self openCellForIdentifier:identifier
                           tableView:tableView
                             section:section];
